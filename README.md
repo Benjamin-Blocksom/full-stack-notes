@@ -97,6 +97,8 @@ An overriding method must have the same parameters as the base class method. Pri
 
 ##### Overloading
 
+##### Generics
+
 ### Handling Exceptions
 
 You can declare anything that is a Throwable or subclass of Throwable in the throws clause.
@@ -136,13 +138,25 @@ The Date-Time API uses the calendar system defined in ISO-8601 as default calend
 
 Apache Maven is a software management and comprehension tool based on the concept of a project object model (POM). It began as an attempt to simplify Java build processes and has the primary goal of allowing a developer to comprehend the complete state of a development effort in the shortest period of time.
 
+### Default Lifecycle
+
+    1. Validate
+    2. Compile
+    3. Test-Compile
+    4. Test
+    5. Package
+    6. Integration-test
+    7. Verify
+    8. Install
+    9. Deploy
+
 ### Dependencies
 
 A dependency is an artifact that Maven will include as part of the build. It is analogous to including the .jar files in your class path for an Eclipse build.
 
 ### Repositories
 
-A Maven respository is the directory where all project .jars, library .jars, and plugins are stored. The maven local repository is a folder on your machine that gets created when you run any maven command for the first time.
+A Maven respository is the directory where all project .jars, library .jars, and plugins are stored. The maven local repository is a folder on your machine that gets created when you run any maven command for the first time. Its default location is `~/.m2/repository`.
 
 Official Maven site: https://maven.apache.org/index.html
 
@@ -505,7 +519,11 @@ Transaction levels table:
 
 ### Caching
 
-
+#### Further Reading
+Wikipedia's high-level discussion on [Object/Relational Mapping](http://en.wikipedia.org/wiki/Object-relational_mapping).
+Martin Fowler's [article on mismatch problems](https://martinfowler.com/bliki/OrmHate.html).
+Scott Wambler's article ["Data Modeling Principles"](http://www.agiledata.org/essays/dataModeling101.html)
+Wikipedia [article on data modeling]()
 Official site: https://hibernate.org/orm/
 
 ## Spring
