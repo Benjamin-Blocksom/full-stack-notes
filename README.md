@@ -143,7 +143,7 @@ Structured Query Language is a domain-specific language used in programming for 
 
 Postgresql official documentation: https://www.postgresql.org/docs/
 
-## HTML & CSS
+## <a name="html-css">HTML & CSS</a>
 &nbsp;[[top]](#top)
 
 Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser. It describes the structure of a web page semantically and originally included cues for a documents appearance.
@@ -508,7 +508,7 @@ Service-Oriented Architecture (SOA) is a technique for building business applica
 
 A service is software that makes itself available.
 
-## Micro-services
+## Microservices
 &nbsp;[[top]](#top)
 
 ## Docker
