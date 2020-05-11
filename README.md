@@ -38,11 +38,7 @@ II. Appendix
 13. Reading Stack Overflow answers
 14. Clean Coding
 15. Markdown
-
-
-
-
-Cryptography
+16. Cryptography
 
 ## <a name="java">Java</a>
 &nbsp;[[top]](#top)
@@ -165,7 +161,29 @@ CSS official documentation (English): https://developer.mozilla.org/en-US/docs/W
 ## XML
 &nbsp;[[top]](#top)
 
-Extensible Markup Language (XML) is a markup language that defines a set of rules for encoding documents in a format that is both human- and machine-readable. The specifications for XML are defined by the World Wide Web Consortium's XML 1.0
+Extensible Markup Language (XML) is a markup language that defines a set of rules for encoding documents in a format that is both human- and machine-readable. The specifications for XML are defined by the World Wide Web Consortium's XML 1.0. It is used for storing and transporting data.
+
+### XML vs. HTML
+
+XMl is for storing and transporting data. HTML is used for displaying data.
+
+### Defining tags
+
+All tags are defined in the Document Type Declaration (DTD) or the XML Schema Definition (XSD).
+
+### XSD
+
+The XML Schema Definition (XSD) specifies how to formally describe elements in an XML document.
+
+### Being well-formed, being valid.
+
+XML is well-formed when it is syntatically correct. I.e., all tags are properly closed, etc. It can be well-formed but not valid. The XSD or a Document Type Declaration (DTD) can validate an XML document.
+
+### JAX and JAXP
+
+JAX is the Java XML API, while JAXP is the API for XML processing. JAXP gives us two APIs for processing information inside an XML document, DOM and SAX.
+
+###
 
 Official documentation: https://www.w3.org/XML/
 
@@ -393,10 +411,50 @@ A transaction object lets you access transaction functionality by abstracting JD
 
 #### Methods
 
-* `save` and `insert` : result in an sql insert.
+* `save`, `insert`: result in an sql insert.
 * `delete` : an SQL delete
-* `update` and `merge`: an sql update
-* `get` and `load` : select statements
+* `update`, `merge`: an sql update
+* `get`, `load`: select statements
+
+### Common JPA annotations in Hibernate
+
+* `@Entity`:
+* `@Table`:
+* `@Id`:
+* `@Column`:
+
+Others include: `@GeneratedValue`, `@OneToOne`, `@ManyToMany`, `@ManyToMany`, `OneToMany`, `ManyToOne`, `@JoinTable`, `@JoinColumn`.
+
+### Java Persistnece API
+
+The Java Persistence API (JPA) provides a POJO persistence model for object-relational mapping. Hibernate implements the Java Persistence API for its annotation functionality.
+
+### Transaction
+
+A transaction is accessing or changing information in a database.
+
+### Transaction Properties
+
+A transaction must be
+  - (A)tomic: transaction executes completely, or not at all.
+  - (C)onsistent: the underlying data store is consistent.
+  - (I)solated: transaction executes without interference from other processes.
+  - (D)urable: the data is not lost if the system crashes.
+
+#### Transaction Isolation Levels
+
+A number of scenarios can arise during concurrent data access. These include dirty reads, unrepeatable reads, phantom reads, and serialization anomolies. Isolation levels are a solution to common issues like lost updates, dirty reads, unrepeatable reads, and phantom reads.
+
+Transaction levels table:
+(x means problem can happen)
+
+| Read Problems | Dirty | Unrepeatable  | Phantom | Serialization |
+| ------------- | ----- | ------------- | ------- | ------ |
+| Read Uncommitted | x | x | x | x |
+| Read Committed   | - | x | x | x |
+| Repeatable Read   | - | - | x | x |
+| Serializable  | - | - | - | - | x |
+
 
 
 
