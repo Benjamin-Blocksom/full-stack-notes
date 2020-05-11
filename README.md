@@ -137,12 +137,14 @@ Apache Maven is a software management and comprehension tool based on the concep
 Maven official site: https://maven.apache.org/index.html
 
 ## SQL
+&nbsp;[[top]](#top)
 
 Structured Query Language is a domain-specific language used in programming for designing and managing data held in a relational database management system (RDBMS). It is particularly useful for handling structured data. [Source: Wikipedia](https://en.wikipedia.org/wiki/SQL)
 
 Postgresql official documentation: https://www.postgresql.org/docs/
 
 ## HTML & CSS
+&nbsp;[[top]](#top)
 
 Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser. It describes the structure of a web page semantically and originally included cues for a documents appearance.
 
@@ -154,12 +156,14 @@ HTML official documentation (English): https://developer.mozilla.org/en-US/docs/
 CSS official documentation (English): https://developer.mozilla.org/en-US/docs/Web/CSS
 
 ## Javascript
+&nbsp;[[top]](#top)
 
  Javascript or ECMAScript (ES6) is a scripting language that lets you implement complex features on web pages. It is the third layer on the layer cake of standard web technologies, along with HTML and CSS. It is high-level with dynamic typing, prototype-based object-orientation and first-class functions. It was created by Brendan Eich to add dynamic behavior to th Netscape Navigator browser in 1995.
 
  Official documentation: https://developer.mozilla.org/en-US/docs/Web/JavaScript
 
 ## XML
+&nbsp;[[top]](#top)
 
 Extensible Markup Language (XML) is a markup language that defines a set of rules for encoding documents in a format that is both human- and machine-readable. The specifications for XML are defined by the World Wide Web Consortium's XML 1.0
 
@@ -398,6 +402,7 @@ A transaction object lets you access transaction functionality by abstracting JD
 Official site: https://hibernate.org/orm/
 
 ## Spring
+&nbsp;[[top]](#top)
 
 The Spring Framework is an application framework and inversion of control container for Java. It is an open-source platform originally written by [Rod Johnson](https://en.wikipedia.org/wiki/Rod_Johnson_(programmer)) and includes several modules for a range of services.
 
@@ -485,6 +490,7 @@ It is important to add a view resolver bean of type _ThymeleafViewResolver_
 A web service is any piece of software that makes itself available over the internet via a standard protocol. They must be discoverable and not tied to an OS.
 
 ### Service Oriented Architecture (SOA)
+&nbsp;[[top]](#top)
 
 Service-Oriented Architecture (SOA) is a technique for building business applications using loosely-coupled services. These act like black boxes and can be orchestrated to achieve a given functionality.
 
@@ -502,7 +508,10 @@ Service-Oriented Architecture (SOA) is a technique for building business applica
 A service is software that makes itself available.
 
 ## Micro-services
+&nbsp;[[top]](#top)
 
 ## Docker
+&nbsp;[[top]](#top)
 
 ## Kubernetes
+&nbsp;[[top]](#top)
