@@ -95,6 +95,8 @@ Members of a class declared private are not inherited by subclasses. Only member
 
 An overriding method must have the same parameters as the base class method. Private methods are not inherited. Final methods cannot be overridden.
 
+##### Overloading
+
 ### Handling Exceptions
 
 You can declare anything that is a Throwable or subclass of Throwable in the throws clause.
@@ -113,6 +115,8 @@ A functional interface is an interface with one, and exactly one, abstract metho
 
 ### Working with Java API
 
+### String class
+
 #### StringBuilder
 
 There is no `reverse ()` method for StringBuilder. You must use either `StringBuffer` or `StringBuilder` for that.
@@ -123,19 +127,47 @@ The Date-Time API uses the calendar system defined in ISO-8601 as default calend
 
 ### Garbage Collection
 
+### Java APIs
 
+#### Java Database Connectivity (JDBC)
 
 ## <a name="maven">Maven</a>
 &nbsp;[[top]](#top)
 
-Apache Maven is a software management and comprehension tool based on the concept of a project object model (POM). It began as an attempt to simplify Java build processes and has the primary goal of allowing a developer to comprehend the complete state of a development effort in the shortest period of time. [Source](https://maven.apache.org/what-is-maven.html)
+Apache Maven is a software management and comprehension tool based on the concept of a project object model (POM). It began as an attempt to simplify Java build processes and has the primary goal of allowing a developer to comprehend the complete state of a development effort in the shortest period of time.
 
-Maven official site: https://maven.apache.org/index.html
+### Dependencies
+
+A dependency is an artifact that Maven will include as part of the build. It is analogous to including the .jar files in your class path for an Eclipse build.
+
+### Repositories
+
+A Maven respository is the directory where all project .jars, library .jars, and plugins are stored. The maven local repository is a folder on your machine that gets created when you run any maven command for the first time.
+
+Official Maven site: https://maven.apache.org/index.html
 
 ## SQL
 &nbsp;[[top]](#top)
 
-Structured Query Language is a domain-specific language used in programming for designing and managing data held in a relational database management system (RDBMS). It is particularly useful for handling structured data. [Source: Wikipedia](https://en.wikipedia.org/wiki/SQL)
+Structured Query Language is a domain-specific language used in programming for designing and managing data held in a relational database management system (RDBMS). It is particularly useful for handling structured data.
+
+### Normalization
+
+Normalization means organizing data in the database to eliminate redundancy and inconsistent dependencies. There are six normal forms, though a typical organization may only use the first three.
+
+1. Atomic/Granular - divide up each attribute until it cannot be divided anymore. Create a Primary Key and identify each set of related data with the prinary key. (1NF)
+2. Start with 1NF. Every non-key attribute is dependent on the primary key as a whole. No partial dependencies. I.e., if there is a composite key, each non-key attribute must rely on the entire composite key, not just some of it. (2NF)
+3. Must be in 2NF. Every non-key attribute is not dependent on any non-key attribute. "
+
+In other words, these three can be said as:
+_"The key, the whole key, and nothing but the key, so help me Codd."_
+
+### SQL Sublanguages
+
+  * DML: data manipulation language (SELECT, INSERT, UPDATE, DELETE)
+  * DQL: data query language (SELECT)
+  * DDL: data definiion language (CREATE, ALTER, TRUNCATE, DROP)
+  * TCL: transaction control languages
 
 Postgresql official documentation: https://www.postgresql.org/docs/
 
@@ -429,6 +461,21 @@ Others include: `@GeneratedValue`, `@OneToOne`, `@ManyToMany`, `@ManyToMany`, `O
 
 The Java Persistence API (JPA) provides a POJO persistence model for object-relational mapping. Hibernate implements the Java Persistence API for its annotation functionality.
 
+### States of Persistence
+
+A class can exist in one of three states of persistence:
+1. Transient: a new instance with no assocation to the Session or representation in the database.
+2. Persistent: is associated with Session and has representation in database.
+3. Detached: Session associates with persistent of object is closed.
+
+### Caching
+
+Caching is a mechanism to enhance system performance by creating a memory buffer between an application and database. Hibernate uses L1 caching by default, which is done on a per-session bases. L2 is an optional strategy done at the SessionFactory level whereby objects can be seen by all sessions using the same L2 cache configuration.
+
+#### Implementing L2 cacheing
+
+Select caching provider based on concurrency strategy (EHCache)
+
 ### Transaction
 
 A transaction is accessing or changing information in a database.
@@ -446,7 +493,6 @@ A transaction must be
 A number of scenarios can arise during concurrent data access. These include dirty reads, unrepeatable reads, phantom reads, and serialization anomolies. Isolation levels are a solution to common issues like lost updates, dirty reads, unrepeatable reads, and phantom reads.
 
 Transaction levels table:
-(x means problem can happen)
 
 | Read Problems | Dirty | Unrepeatable  | Phantom | Serialization |
 | ------------- | ----- | ------------- | ------- | ------ |
@@ -455,7 +501,9 @@ Transaction levels table:
 | Repeatable Read   | - | - | x | x |
 | Serializable  | - | - | - | - | x |
 
+(if marked 'x', problem can happen)
 
+### Caching
 
 
 Official site: https://hibernate.org/orm/
@@ -574,3 +622,12 @@ A service is software that makes itself available.
 
 ## Kubernetes
 &nbsp;[[top]](#top)
+
+II - Appendix
+
+## Architecture and Design
+
+### Object-oriented principles
+Four pillars and Grady Booch's major/minor elements.
+
+#### Major & Minor Elements
